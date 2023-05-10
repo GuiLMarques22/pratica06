@@ -6,8 +6,22 @@ public class RedeSocial {
     private String dataNascimento;
     private String senha;
 
-
     ArrayList<Publicacao>publicacoes = new ArrayList<>();
+
+
+
+    void inserePublicacao(Publicacao publi){
+        publicacoes.add(publi);
+    }
+    void imprimePublicacoes(){
+        System.out.println("Total de publicações: " + Publicacao.getContadorPublicacao());
+    for (int i=0;i<publicacoes.size();i++){
+        System.out.println("Data da Publicação " + publicacoes.get(i).getDataPublicacao());
+        System.out.println("Texto da publicação" + publicacoes.get(i).getTextoPublicacao());
+    }
+    }
+
+
 
     public RedeSocial(String dataCriacao, String nomeUsuario, String dataNascimento, String senha) {
         this.dataCriacao = dataCriacao;
@@ -16,18 +30,35 @@ public class RedeSocial {
         this.senha = senha;
     }
 
-    public RedeSocial() {
-
+    public String getDataCriacao() {
+        return dataCriacao;
     }
 
-    public void inserePublicacao(Publicacao String) {
-        return ;
-
-    }
-    public ArrayList<Publicacao> imprimePublicacoes(Publicacao String){
-        return publicacoes;
+    public void setDataCriacao(String dataCriacao) {
+        this.dataCriacao = dataCriacao;
     }
 
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
 
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 }
-
